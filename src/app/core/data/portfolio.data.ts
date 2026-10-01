@@ -65,8 +65,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
         en: 'Mobile Architecture & Dual Store Release',
       },
       description: {
-        pt: 'Engenharia móvel avançada com Flutter, ecossistema Android nativo (Kotlin/Java) e React Native. Arquitetura MVVM, BLoC, Clean Code, esteiras de publicação na Google Play Store & Apple App Store e fluidez contínua a 60 FPS.',
-        en: 'Advanced mobile engineering across Flutter, native Android (Kotlin/Java), and React Native. Clean MVVM, BLoC, dual-store release pipelines (Google Play & Apple App Store), and uncompromising 60 FPS performance.',
+        pt: 'Engenharia móvel avançada com Flutter, ecossistema Android nativo (Kotlin/Java) e React Native. Arquitetura MVVM, BLoC, Clean Code, esteiras de publicação na Google Play Store & Apple App Store, alta performance, experiência fluida nativa e ausência de gargalos de renderização.',
+        en: 'Advanced mobile engineering across Flutter, native Android (Kotlin/Java), and React Native. Clean MVVM, BLoC, dual-store release pipelines (Google Play & Apple App Store), high performance, fluid native UX, and zero rendering bottlenecks.',
       },
       tags: ['Flutter', 'Dart', 'BLoC / Cubit', 'Android Nativo', 'React Native', 'Google Play & App Store', 'Offline First'],
     },
@@ -207,8 +207,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
           en: 'Technical Solution: Full migration to Flutter with Clean Architecture, MVVM, and BLoC, with unified release pipelines for App Store and Play Store.',
         },
         {
-          pt: 'Impacto: Base de código única e sustentável, estabilidade constante a 60 FPS e redução drástica no lead time de novas versões.',
-          en: 'Impact: Unified sustainable codebase, rock-solid 60 FPS stability, and dramatic lead time reduction for enterprise feature rollout.',
+          pt: 'Impacto: Base de código única e sustentável, alta performance com experiência fluida nativa sem gargalos de renderização e redução drástica no lead time de novas versões.',
+          en: 'Impact: Unified sustainable codebase, high performance with fluid native UX, zero rendering bottlenecks, and dramatic lead time reduction for enterprise feature rollout.',
         },
       ],
       tags: ['Flutter', 'Dart', 'BLoC', 'Clean Architecture', 'Apple App Store', 'Google Play Store', 'Android Nativo'],

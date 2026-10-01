@@ -90,7 +90,7 @@ import { GlowButtonComponent } from '../../../shared/components/glow-button.comp
                     </div>
                     <div>
                       <div class="font-semibold text-white text-[11px]">Atlas Health</div>
-                      <div class="text-[9px] text-[#10B981] font-mono">● 60 FPS · Clean Arch</div>
+                      <div class="text-[9px] text-[#10B981] font-mono">● High Perf · Clean Arch</div>
                     </div>
                   </div>
                   <span class="text-[9px] font-mono text-white/40">v2.4.1</span>
