@@ -83,16 +83,23 @@ import { TagBadgeComponent } from '../../../shared/components/tag-badge.componen
             }
           </div>
 
-          <!-- App Banner (if present) -->
+          <!-- App Header Visual (Icon + Identity) -->
           @if (project().bannerImage) {
-            <div class="mb-4 relative overflow-hidden rounded-xl border border-white/10 h-28 sm:h-32 w-full bg-[#08090A]">
+            <div class="mb-5 flex items-center gap-3.5 p-3 rounded-2xl border border-white/10 bg-white/[0.03]">
               <img
                 [src]="project().bannerImage"
-                [alt]="project().title"
+                [alt]="project().title + ' icon'"
                 loading="lazy"
-                class="w-full h-full object-cover object-center opacity-85 hover:opacity-100 transition-opacity duration-300"
+                class="h-14 w-14 sm:h-16 sm:w-16 rounded-2xl object-cover shadow-lg border border-white/15 shrink-0"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#121417] via-transparent to-transparent pointer-events-none"></div>
+              <div class="flex flex-col min-w-0">
+                <span class="text-[10px] font-mono text-[#38BDF8] uppercase tracking-wider font-semibold">Google Play Showcase</span>
+                <span class="text-xs sm:text-sm font-bold text-white truncate mt-0.5">{{ project().title }}</span>
+                <span class="text-[10px] font-mono text-emerald-400 mt-1 flex items-center gap-1">
+                  <span>★</span>
+                  <span>{{ portfolio.currentLanguage() === 'pt' ? 'Produção Oficial Google Play' : 'Official Google Play Release' }}</span>
+                </span>
+              </div>
             </div>
           }
 
@@ -127,18 +134,18 @@ import { TagBadgeComponent } from '../../../shared/components/tag-badge.componen
           <!-- App Screenshots Showcase (if present) -->
           @if (project().screenshots?.length) {
             <div class="mt-6 pt-4 border-t border-white/5">
-              <span class="text-[11px] font-mono uppercase tracking-wider text-[#38BDF8] font-semibold mb-2.5 flex items-center gap-1.5">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-[#38BDF8] font-semibold mb-3 flex items-center gap-1.5">
                 <span>📱</span>
-                <span>{{ portfolio.currentLanguage() === 'pt' ? 'Telas do Aplicativo:' : 'Production App Screens:' }}</span>
+                <span>{{ portfolio.currentLanguage() === 'pt' ? 'Telas Oficiais (Google Play):' : 'Official Google Play Screens:' }}</span>
               </span>
-              <div class="flex items-center gap-3 overflow-x-auto pb-2">
+              <div class="flex items-center gap-3.5 overflow-x-auto pb-3 pt-1">
                 @for (shot of project().screenshots; track shot) {
-                  <div class="shrink-0 relative group/img overflow-hidden rounded-xl border border-white/10 bg-[#08090A] shadow-md hover:border-[#38BDF8]/60 hover:shadow-[0_0_15px_rgba(56,189,248,0.2)] transition-all duration-300">
+                  <div class="shrink-0 relative group/img overflow-hidden rounded-2xl border-2 border-white/10 bg-[#08090A] shadow-xl hover:border-[#38BDF8] hover:shadow-[0_0_20px_rgba(56,189,248,0.3)] transition-all duration-300">
                     <img
                       [src]="shot"
-                      [alt]="project().title + ' preview'"
+                      [alt]="project().title + ' screen'"
                       loading="lazy"
-                      class="h-32 sm:h-36 w-auto object-cover rounded-xl transition-transform duration-300 group-hover/img:scale-105"
+                      class="h-44 sm:h-52 w-auto object-contain rounded-2xl transition-transform duration-300 group-hover/img:scale-105"
                     />
                   </div>
                 }

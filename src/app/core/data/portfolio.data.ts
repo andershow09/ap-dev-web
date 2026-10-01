@@ -118,6 +118,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
         'assets/showcase/thermocalc/screen1.jpeg',
         'assets/showcase/thermocalc/screen2.jpeg',
         'assets/showcase/thermocalc/screen3.jpeg',
+        'assets/showcase/thermocalc/screen4.jpeg',
+        'assets/showcase/thermocalc/screen5.jpeg',
       ],
       summary: {
         pt: 'Aplicativo móvel utilitário para engenharia de climatização e refrigeração, idealizado e publicado de forma independente sob a chancela AP Developer na Google Play Store.',
@@ -156,6 +158,8 @@ export const PORTFOLIO_DATA: PortfolioData = {
         'assets/showcase/gosafra/screen2.jpeg',
         'assets/showcase/gosafra/screen3.jpeg',
         'assets/showcase/gosafra/screen4.jpeg',
+        'assets/showcase/gosafra/screen5.jpeg',
+        'assets/showcase/gosafra/screen6.jpeg',
       ],
       summary: {
         pt: 'Co-fundação e idealização de ecossistema mobile e APIs para o agronegócio, conectando produtores rurais, operadores de máquinas agrícolas e prestadores de serviços de colheita com aplicativos ativos na Google Play Store.',
