@@ -57,6 +57,8 @@ export interface ProjectItem {
   githubUrl?: string;
   liveUrl?: string;
   caseStudyUrl?: string;
+  screenshots?: string[];
+  bannerImage?: string;
 }
 
 export interface TestimonialItem {
