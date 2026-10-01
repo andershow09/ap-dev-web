@@ -1,8 +1,8 @@
 <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="ap-bg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#181B20" />
-      <stop offset="100%" stop-color="#0A0B0D" />
+      <stop offset="0%" stop-color="#1A1E24" />
+      <stop offset="100%" stop-color="#08090A" />
     </linearGradient>
     <linearGradient id="ap-stroke" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#5E6AD2" />
@@ -13,26 +13,20 @@
   <!-- Squircle Base Frame -->
   <rect x="8" y="8" width="84" height="84" rx="24" fill="url(#ap-bg)" stroke="url(#ap-stroke)" stroke-width="2" />
 
-  <!-- Subtle Internal Grid -->
-  <line x1="8" y1="54" x2="92" y2="54" stroke="white" stroke-opacity="0.05" stroke-width="1" />
-  <line x1="50" y1="8" x2="50" y2="54" stroke="white" stroke-opacity="0.05" stroke-width="1" />
+  <!-- Terminal Window Control Dots -->
+  <circle cx="22" cy="22" r="2.5" fill="#EF4444" opacity="0.9" />
+  <circle cx="29" cy="22" r="2.5" fill="#F59E0B" opacity="0.9" />
+  <circle cx="36" cy="22" r="2.5" fill="#10B981" opacity="0.9" />
+  <line x1="8" y1="30" x2="92" y2="30" stroke="white" stroke-opacity="0.08" stroke-width="1" />
 
-  <!-- Geometric 'A' -->
-  <path d="M26 49L39 21C39.8 19.2 42.2 19.2 43 21L56 49" stroke="#F7F8F8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M31 39H51" stroke="#F7F8F8" stroke-width="4.5" stroke-linecap="round" />
+  <!-- Monogram Letter 'A' -->
+  <path d="M24 72L38 40C38.8 38.5 41.2 38.5 42 40L56 72" stroke="#F7F8F8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M29 62H51" stroke="#F7F8F8" stroke-width="4.5" stroke-linecap="round" />
 
-  <!-- Geometric 'P' -->
-  <path d="M52 21H66C72 21 76 25 76 30.5C76 36 72 40 66 40H52V49" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-  
-  <!-- Neural Node -->
-  <circle cx="66" cy="30.5" r="2.5" fill="#38BDF8" />
+  <!-- Monogram Letter 'P' -->
+  <path d="M52 40H66C72 40 76 44 76 49.5C76 55 72 59 66 59H52V72" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- Monospace Capsule Badge for 'dev' -->
-  <rect x="23" y="60" width="54" height="21" rx="6" fill="#38BDF8" fill-opacity="0.1" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1.2" />
-  
-  <!-- Active Green Status Dot -->
-  <circle cx="31" cy="70.5" r="2" fill="#10B981" />
-
-  <!-- Label .DEV -->
-  <text x="53" y="74.5" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10.5" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1.5">.DEV</text>
+  <!-- Terminal 'dev' Pill Badge -->
+  <rect x="58" y="63" width="24" height="13" rx="3.5" fill="#5E6AD2" fill-opacity="0.25" stroke="#5E6AD2" stroke-opacity="0.6" stroke-width="1" />
+  <text x="70" y="73" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="8.5" font-weight="700" fill="#818CF8" text-anchor="middle" letter-spacing="0.5">dev</text>
 </svg>
