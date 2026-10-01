@@ -1,0 +1,37 @@
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../../core/services/portfolio.service';
+
+@Component({
+  selector: 'app-proof-strip',
+  standalone: true,
+  template: `
+    <section class="py-12 border-b border-white/5 bg-[#08090A]">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-6 md:grid-cols-4">
+          @for (metric of portfolio.metrics(); track metric.value) {
+            <div
+              class="group relative flex flex-col justify-between rounded-xl border border-white/5 bg-[#121417]/60 p-5 backdrop-blur-sm transition-all duration-300 hover:border-[#38BDF8]/40 hover:bg-[#181B20] hover:shadow-[0_4px_20px_rgba(56,189,248,0.1)]"
+            >
+              <div>
+                <span class="font-mono text-2xl sm:text-3xl font-bold tracking-tight text-white group-hover:text-[#38BDF8] transition-colors">
+                  {{ metric.value }}
+                </span>
+                <h4 class="mt-2 text-xs sm:text-sm font-semibold text-[#F7F8F8] leading-snug">
+                  {{ portfolio.localize(metric.label) }}
+                </h4>
+              </div>
+              @if (metric.detail) {
+                <p class="mt-2 text-[11px] text-[#8A8F98] leading-tight line-clamp-2">
+                  {{ portfolio.localize(metric.detail) }}
+                </p>
+              }
+            </div>
+          }
+        </div>
+      </div>
+    </section>
+  `,
+})
+export class ProofStripComponent {
+  readonly portfolio = inject(PortfolioService);
+}

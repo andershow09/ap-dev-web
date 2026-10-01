@@ -1,0 +1,183 @@
+import { Component, inject } from '@angular/core';
+import { PortfolioService } from '../../../core/services/portfolio.service';
+import { TerminalStreamService } from '../../../core/services/terminal-stream.service';
+import { GlowButtonComponent } from '../../../shared/components/glow-button.component';
+
+@Component({
+  selector: 'app-hero',
+  standalone: true,
+  imports: [GlowButtonComponent],
+  template: `
+    <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
+      <!-- Background subtle gradient glow -->
+      <div
+        class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-gradient-to-br from-[#5E6AD2]/15 via-[#38BDF8]/10 to-transparent blur-3xl"
+        aria-hidden="true"
+      ></div>
+
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:items-center">
+          <!-- Left Column: Copy & Actions (7 cols) -->
+          <div class="lg:col-span-7 flex flex-col items-start text-left">
+            <!-- Top Tag Pill -->
+            <div
+              class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-[#121417] px-3.5 py-1 text-xs font-mono text-[#38BDF8] shadow-sm backdrop-blur-md"
+            >
+              <span class="inline-block h-1.5 w-1.5 rounded-full bg-[#38BDF8] animate-pulse"></span>
+              <span>// FLUTTER · ANDROID · AI AGENTS · WEB</span>
+            </div>
+
+            <!-- Headline -->
+            <h1
+              class="font-sans text-3xl font-extrabold tracking-tight text-[#F7F8F8] sm:text-5xl sm:leading-[1.15]"
+            >
+              {{ headline() }}
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="mt-6 max-w-2xl text-base leading-relaxed text-[#8A8F98] sm:text-lg">
+              {{ subheadline() }}
+            </p>
+
+            <!-- Actions -->
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <app-glow-button
+                variant="primary"
+                href="#projetos"
+                [label]="isPt() ? 'Ver Projetos & Cases →' : 'Explore Projects & Cases →'"
+              />
+
+              <app-glow-button
+                variant="secondary"
+                [href]="portfolio.profile().socialLinks.github"
+                target="_blank"
+                label="GitHub"
+              >
+                <svg class="h-4 w-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+              </app-glow-button>
+
+              <app-glow-button
+                variant="secondary"
+                [href]="portfolio.profile().socialLinks.linkedin"
+                target="_blank"
+                label="LinkedIn"
+              >
+                <svg class="h-4 w-4 shrink-0 text-[#38BDF8]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </app-glow-button>
+            </div>
+          </div>
+
+          <!-- Right Column: Dual Visual (Smartphone + AI Terminal) (5 cols) -->
+          <div class="lg:col-span-5 relative flex items-center justify-center">
+            <!-- Simulated Mobile Device Frame -->
+            <div
+              class="relative z-10 w-64 sm:w-72 rounded-[36px] border-4 border-[#22262E] bg-[#0D0F12] p-3 shadow-2xl shadow-black/80"
+            >
+              <!-- Notch / Dynamic Island -->
+              <div class="mx-auto h-4 w-24 rounded-full bg-[#181B20] mb-3"></div>
+
+              <!-- Screen Inner Content -->
+              <div class="rounded-[24px] border border-white/5 bg-[#121417] p-4 text-xs font-sans">
+                <!-- App Header -->
+                <div class="flex items-center justify-between pb-3 border-b border-white/5">
+                  <div class="flex items-center gap-2">
+                    <div class="h-6 w-6 rounded-md bg-[#38BDF8]/20 flex items-center justify-center text-[#38BDF8] font-bold text-[10px]">
+                      AP
+                    </div>
+                    <div>
+                      <div class="font-semibold text-white text-[11px]">Atlas Health</div>
+                      <div class="text-[9px] text-[#10B981] font-mono">● 60 FPS · Clean Arch</div>
+                    </div>
+                  </div>
+                  <span class="text-[9px] font-mono text-white/40">v2.4.1</span>
+                </div>
+
+                <!-- Metric Card -->
+                <div class="my-3 rounded-xl bg-[#181B20]/80 p-3 border border-white/5">
+                  <div class="flex justify-between text-[10px] text-[#8A8F98]">
+                    <span>In-flight Queries</span>
+                    <span class="text-[#38BDF8] font-mono">1.2ms</span>
+                  </div>
+                  <div class="mt-2 text-base font-bold text-white font-mono">99.98%</div>
+                  <div class="mt-1 h-1 w-full bg-white/10 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#5E6AD2] to-[#38BDF8] w-[95%]"></div>
+                  </div>
+                </div>
+
+                <!-- Features list in mini card -->
+                <div class="flex flex-col gap-2 pt-1">
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white/[0.02] border border-white/5">
+                    <span class="text-[10px] text-[#F7F8F8]">BLoC State Stream</span>
+                    <span class="text-[9px] font-mono text-[#10B981]">ACTIVE</span>
+                  </div>
+                  <div class="flex items-center justify-between p-2 rounded-lg bg-white/[0.02] border border-white/5">
+                    <span class="text-[10px] text-[#F7F8F8]">Edge AI Local RAG</span>
+                    <span class="text-[9px] font-mono text-[#5E6AD2]">SYNCED</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Overlapping Live AI Terminal -->
+            <div
+              class="absolute -bottom-6 -right-2 sm:-right-6 z-20 w-80 sm:w-96 rounded-xl border border-white/15 bg-[#08090A]/95 p-4 shadow-2xl shadow-[#5E6AD2]/20 backdrop-blur-xl"
+            >
+              <!-- Window topbar -->
+              <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-white/10">
+                <div class="flex items-center gap-1.5">
+                  <span class="h-2.5 w-2.5 rounded-full bg-[#EF4444]"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-[#F59E0B]"></span>
+                  <span class="h-2.5 w-2.5 rounded-full bg-[#10B981]"></span>
+                  <span class="ml-2 text-[10px] font-mono text-[#8A8F98]">agent-orchestrator.sh</span>
+                </div>
+                <div class="text-[10px] font-mono text-[#38BDF8]">
+                  TOKENS: {{ terminal.currentTokens() }}
+                </div>
+              </div>
+
+              <!-- Terminal Lines -->
+              <div class="flex flex-col gap-1.5 font-mono text-[11px] leading-tight min-h-[110px]">
+                @for (line of terminal.lines(); track $index) {
+                  <div class="flex items-baseline gap-2">
+                    <span
+                      class="shrink-0 font-bold"
+                      [class.text-[#38BDF8]]="line.type === 'command'"
+                      [class.text-[#8A8F98]]="line.type === 'info'"
+                      [class.text-[#5E6AD2]]="line.type === 'tool'"
+                      [class.text-[#F59E0B]]="line.type === 'workflow'"
+                      [class.text-[#10B981]]="line.type === 'success'"
+                    >
+                      {{ line.prefix }}
+                    </span>
+                    <span class="text-[#D5DAE4] break-all">{{ line.content }}</span>
+                  </div>
+                }
+                <div class="text-[#38BDF8] animate-pulse">▍</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `,
+})
+export class HeroComponent {
+  readonly portfolio = inject(PortfolioService);
+  readonly terminal = inject(TerminalStreamService);
+
+  isPt(): boolean {
+    return this.portfolio.currentLanguage() === 'pt';
+  }
+
+  headline(): string {
+    return this.portfolio.localize(this.portfolio.profile().headline);
+  }
+
+  subheadline(): string {
+    return this.portfolio.localize(this.portfolio.profile().subheadline);
+  }
+}
