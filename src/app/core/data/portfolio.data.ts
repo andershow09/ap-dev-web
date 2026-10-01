@@ -181,7 +181,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         },
       ],
       tags: ['Mobile Apps', 'Co-founder & CTO', 'Google Play Store', 'Agritech', 'APIs REST', 'Offline Sync'],
-      liveUrl: 'https://play.google.com/store/apps/developer?id=Agro+Help+Labs',
+      liveUrl: 'https://play.google.com/store/apps/details?id=br.com.agrohelplabs.gosafra',
     },
     {
       id: 'erp-mobile-modernization',
