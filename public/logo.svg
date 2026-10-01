@@ -1,0 +1,38 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ap-bg" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#181B20" />
+      <stop offset="100%" stop-color="#0A0B0D" />
+    </linearGradient>
+    <linearGradient id="ap-stroke" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5E6AD2" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Squircle Base Frame -->
+  <rect x="8" y="8" width="84" height="84" rx="24" fill="url(#ap-bg)" stroke="url(#ap-stroke)" stroke-width="2" />
+
+  <!-- Subtle Internal Grid -->
+  <line x1="8" y1="54" x2="92" y2="54" stroke="white" stroke-opacity="0.05" stroke-width="1" />
+  <line x1="50" y1="8" x2="50" y2="54" stroke="white" stroke-opacity="0.05" stroke-width="1" />
+
+  <!-- Geometric 'A' -->
+  <path d="M26 49L39 21C39.8 19.2 42.2 19.2 43 21L56 49" stroke="#F7F8F8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M31 39H51" stroke="#F7F8F8" stroke-width="4.5" stroke-linecap="round" />
+
+  <!-- Geometric 'P' -->
+  <path d="M52 21H66C72 21 76 25 76 30.5C76 36 72 40 66 40H52V49" stroke="#38BDF8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Neural Node -->
+  <circle cx="66" cy="30.5" r="2.5" fill="#38BDF8" />
+
+  <!-- Monospace Capsule Badge for 'dev' -->
+  <rect x="23" y="60" width="54" height="21" rx="6" fill="#38BDF8" fill-opacity="0.1" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1.2" />
+  
+  <!-- Active Green Status Dot -->
+  <circle cx="31" cy="70.5" r="2" fill="#10B981" />
+
+  <!-- Label .DEV -->
+  <text x="53" y="74.5" font-family="'JetBrains Mono', 'Fira Code', monospace" font-size="10.5" font-weight="700" fill="#38BDF8" text-anchor="middle" letter-spacing="1.5">.DEV</text>
+</svg>

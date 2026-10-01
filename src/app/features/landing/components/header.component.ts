@@ -10,12 +10,12 @@ import { PortfolioService } from '../../../core/services/portfolio.service';
         class="mx-auto flex max-w-6xl items-center justify-between rounded-full border border-white/10 bg-[#08090A]/80 px-5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-xl"
       >
         <!-- Logo -->
-        <a href="#" class="flex items-center gap-2 group">
-          <div
-            class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[#5E6AD2] to-[#38BDF8] text-xs font-mono font-bold text-white shadow-[0_0_15px_rgba(94,106,210,0.4)] group-hover:scale-105 transition-transform"
-          >
-            AP
-          </div>
+        <a href="#" class="flex items-center gap-2.5 group">
+          <img
+            src="logo.svg"
+            alt="AP Dev Logo"
+            class="h-8 w-8 rounded-lg shadow-[0_0_15px_rgba(94,106,210,0.4)] group-hover:scale-105 transition-transform"
+          />
           <span class="font-sans text-sm font-semibold tracking-tight text-[#F7F8F8]">
             AP<span class="text-[#38BDF8]">.dev</span>
           </span>
