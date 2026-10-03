@@ -28,6 +28,8 @@ Este documento registra decisões arquiteturais, diretrizes e padrões de engenh
      - `features/[feature-name]/components/[component-name]/`: Componentes específicos de cada feature de negócio.
      - `shared/components/[component-name]/`: Componentes utilitários de UI reutilizáveis transversalmente.
 
+
+
 ---
 
 ## 2. Guardrails de Testes e Zoneless
@@ -35,3 +37,15 @@ Este documento registra decisões arquiteturais, diretrizes e padrões de engenh
 - **Test Runner:** Vitest v5 integrado ao Angular 22 (`ng test`).
 - **Arquitetura Reativa:** 100% Zoneless (`provideZonelessChangeDetection`), Signals nativos (`signal`, `computed`, `input`, `output`) e sem uso de `zone.js`.
 - **Mocks de Teste:** `IntersectionObserver` mockado defensivamente para execução de testes em ambiente jsdom/Vitest.
+
+---
+
+## 3. Hospedagem e Domínio Customizado (Cloudflare Workers & ap.is-a.dev)
+
+- **Data da Decisão:** Outubro/2026
+- **Ambiente de Produção Primário:** Cloudflare Workers (latest Cloudflare Pages) com SPA routing nativo (`wrangler.jsonc`) e headers de segurança (`_headers`).
+  - URL Ativa: `https://ap-dev.ap-dev-web.workers.dev`
+- **Ambiente de Contingência / CI/CD:** GitHub Pages via GitHub Actions (`deploy-pages.yml`) disparado a cada push em `main`.
+- **Domínio Oficial Gratuito:** `ap.is-a.dev` (Pull Request oficial [#54862](https://github.com/is-a-dev/register/pull/54862)).
+  - Configuração: Registro CNAME no repositório `is-a-dev/register` com arquivo `public/CNAME`.
+  - Motivo: Domínio ultra-curto (2 caracteres), gratuito para sempre, SSL automático e identidade de marca direta com "AP Dev / Anderson Pereira".
