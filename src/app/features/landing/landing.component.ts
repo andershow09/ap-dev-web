@@ -1,14 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { PortfolioService } from '../../core/services/portfolio.service';
-import { HeaderComponent } from './components/header.component';
-import { HeroComponent } from './components/hero.component';
-import { GithubHeatmapComponent } from './components/github-heatmap.component';
-import { ProofStripComponent } from './components/proof-strip.component';
-import { CapabilityTiersComponent } from './components/capability-tiers.component';
-import { ProjectCardComponent } from './components/project-card.component';
-import { CareerTimelineComponent } from './components/career-timeline.component';
-import { EngineeringStandardsComponent } from './components/engineering-standards.component';
-import { FooterComponent } from './components/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { GithubHeatmapComponent } from './components/github-heatmap/github-heatmap.component';
+import { ProofStripComponent } from './components/proof-strip/proof-strip.component';
+import { CapabilityTiersComponent } from './components/capability-tiers/capability-tiers.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { CareerTimelineComponent } from './components/career-timeline/career-timeline.component';
+import { EngineeringStandardsComponent } from './components/engineering-standards/engineering-standards.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-landing',
@@ -24,84 +24,7 @@ import { FooterComponent } from './components/footer.component';
     EngineeringStandardsComponent,
     FooterComponent,
   ],
-  template: `
-    <div class="min-h-screen bg-[#08090A] text-[#F7F8F8] selection:bg-[#38BDF8]/30 selection:text-[#38BDF8]">
-      <!-- Header -->
-      <app-header />
-
-      <main>
-        <!-- Hero Section -->
-        <app-hero />
-
-        <!-- GitHub Heatmap Activity Strip -->
-        <app-github-heatmap />
-
-        <!-- Authority Proof Strip -->
-        <app-proof-strip />
-
-        <!-- Capability Tiers (3 Pillars) -->
-        <app-capability-tiers />
-
-        <!-- Selected Projects (Folder Tab Grid) -->
-        <section id="projetos" class="py-20 sm:py-28 relative">
-          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-            <!-- Header -->
-            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14 text-left">
-              <div>
-                <p class="font-mono text-xs sm:text-sm text-[#38BDF8] font-semibold">
-                  // {{ isPt() ? 'cases reais de produção' : 'selected production work' }}
-                </p>
-                <h2 class="mt-2 font-sans text-2xl sm:text-4xl font-bold tracking-tight text-[#F7F8F8]">
-                  {{ isPt() ? 'Projetos de Alto Impacto' : 'High-Impact Case Studies' }}
-                </h2>
-                <p class="mt-3 max-w-xl text-sm sm:text-base text-[#8A8F98]">
-                  {{
-                    isPt()
-                      ? 'Experiências reais em ecossistemas corporativos críticos, agtech e laboratório de agentes de IA.'
-                      : 'Production software spanning enterprise migrations, agtech ecosystems, and autonomous AI agents.'
-                  }}
-                </p>
-              </div>
-
-              <a
-                [href]="portfolio.profile().socialLinks.github"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-mono text-xs text-[#8A8F98] hover:text-[#38BDF8] transition-colors flex items-center gap-1.5"
-              >
-                <span>{{ isPt() ? 'Ver todos no GitHub' : 'View all on GitHub' }}</span>
-                <span>→</span>
-              </a>
-            </div>
-
-            <!-- Folder Tab Grid (2 cols) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-              @for (proj of portfolio.projects(); track proj.id) {
-                <app-project-card [project]="proj" />
-              }
-            </div>
-          </div>
-        </section>
-
-        <!-- Engineering Standards -->
-        @defer (on viewport) {
-          <app-engineering-standards />
-        } @placeholder {
-          <div class="h-40 bg-[#0D0F12]"></div>
-        }
-
-        <!-- Career Trajectory (Continuous Timeline) -->
-        @defer (on viewport) {
-          <app-career-timeline />
-        } @placeholder {
-          <div class="h-40 bg-[#08090A]"></div>
-        }
-      </main>
-
-      <!-- Footer & CTA -->
-      <app-footer />
-    </div>
-  `,
+  templateUrl: './landing.component.html',
 })
 export class LandingComponent {
   readonly portfolio = inject(PortfolioService);

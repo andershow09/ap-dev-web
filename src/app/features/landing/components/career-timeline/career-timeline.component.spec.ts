@@ -3,7 +3,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { CareerTimelineComponent } from './career-timeline.component';
-import { PortfolioService } from '../../../core/services/portfolio.service';
+import { PortfolioService } from '../../../../core/services/portfolio.service';
 
 describe('CareerTimelineComponent', () => {
   let fixture: ComponentFixture<CareerTimelineComponent>;

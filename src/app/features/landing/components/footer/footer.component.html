@@ -1,0 +1,80 @@
+<footer id="contato" class="pt-20 pb-12 relative overflow-hidden bg-[#08090A]">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <!-- CTA Banner Card -->
+    <div
+      class="relative rounded-3xl border border-white/10 bg-gradient-to-b from-[#121417] to-[#0D0F12] p-8 sm:p-14 text-center shadow-2xl overflow-hidden"
+    >
+      <!-- Background glow circle -->
+      <div
+        class="pointer-events-none absolute -bottom-20 left-1/2 -translate-x-1/2 h-64 w-96 rounded-full bg-gradient-to-r from-[#5E6AD2]/20 to-[#38BDF8]/20 blur-3xl"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Status badge -->
+      <div
+        class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3.5 py-1 text-xs font-mono text-emerald-400 mb-6 backdrop-blur-sm"
+      >
+        <span class="relative flex h-2 w-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+        </span>
+        <span>{{ isPt() ? 'Disponível para novos projetos & consultorias' : 'Open for senior challenges & advisory' }}</span>
+      </div>
+
+      <h2 class="font-sans text-2xl sm:text-4xl font-extrabold text-[#F7F8F8] max-w-2xl mx-auto leading-tight">
+        {{
+          isPt()
+            ? 'Vamos construir o próximo nível do seu produto móvel ou ecossistema de IA?'
+            : "Let's build the next level of your mobile product or AI ecosystem together."
+        }}
+      </h2>
+
+      <p class="mt-4 text-sm sm:text-base text-[#8A8F98] max-w-xl mx-auto">
+        {{
+          isPt()
+            ? 'Seja para modernizar uma base legada para Flutter, integrar agentes de IA ou arquitetar Micro Frontends corporativos.'
+            : 'Whether modernizing legacy apps to Flutter, orchestrating AI agents, or building enterprise Micro Frontends.'
+        }}
+      </p>
+
+      <!-- Buttons Row -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+        <app-glow-button
+          variant="primary"
+          [href]="'mailto:' + portfolio.profile().socialLinks.email"
+          [label]="isPt() ? 'Iniciar Conversa ✉' : 'Send an Email ✉'"
+        />
+
+        <app-glow-button
+          variant="secondary"
+          [href]="portfolio.profile().socialLinks.linkedin"
+          target="_blank"
+          label="LinkedIn ↗"
+        />
+
+        <app-glow-button
+          variant="secondary"
+          [href]="portfolio.profile().socialLinks.github"
+          target="_blank"
+          label="GitHub ↗"
+        />
+      </div>
+    </div>
+
+    <!-- Bottom Copyright Row -->
+    <div class="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-[#8A8F98]">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-white">AP.dev</span>
+        <span>·</span>
+        <span>© 2026 Anderson Pereira. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-2 text-[11px]">
+        <span>Crafted with</span>
+        <span class="text-[#38BDF8] font-bold">Angular 22 Zoneless</span>
+        <span>&</span>
+        <span class="text-[#5E6AD2] font-bold">Tailwind CSS</span>
+      </div>
+    </div>
+  </div>
+</footer>

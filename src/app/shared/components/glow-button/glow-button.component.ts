@@ -5,33 +5,7 @@ import { NgTemplateOutlet } from '@angular/common';
   selector: 'app-glow-button',
   standalone: true,
   imports: [NgTemplateOutlet],
-  template: `
-    @if (href()) {
-      <a
-        [href]="href()"
-        [target]="target()"
-        rel="noopener noreferrer"
-        [class]="buttonClasses()"
-      >
-        <ng-container *ngTemplateOutlet="btnContent" />
-      </a>
-    } @else {
-      <button
-        type="button"
-        (click)="clicked.emit()"
-        [class]="buttonClasses()"
-      >
-        <ng-container *ngTemplateOutlet="btnContent" />
-      </button>
-    }
-
-    <ng-template #btnContent>
-      @if (label()) {
-        <span>{{ label() }}</span>
-      }
-      <ng-content />
-    </ng-template>
-  `,
+  templateUrl: './glow-button.component.html',
 })
 export class GlowButtonComponent {
   readonly variant = input<'primary' | 'secondary' | 'ghost'>('primary');

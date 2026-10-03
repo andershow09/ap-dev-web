@@ -3,7 +3,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 import { HeaderComponent } from './header.component';
-import { PortfolioService } from '../../../core/services/portfolio.service';
+import { PortfolioService } from '../../../../core/services/portfolio.service';
 
 describe('HeaderComponent', () => {
   let fixture: ComponentFixture<HeaderComponent>;

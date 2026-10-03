@@ -1,0 +1,93 @@
+<section id="depoimentos" class="py-20 sm:py-28 relative overflow-hidden">
+  <!-- Background subtle dot pattern -->
+  <div
+    class="pointer-events-none absolute inset-0 opacity-[0.15]"
+    style="background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0); background-size: 24px 24px;"
+    aria-hidden="true"
+  ></div>
+
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="mb-14 text-left">
+      <p class="font-mono text-xs sm:text-sm text-[#38BDF8] font-semibold">
+        // {{ isPt() ? 'recomendações & feedback' : 'peer recommendations' }}
+      </p>
+      <h2 class="mt-2 font-sans text-2xl sm:text-4xl font-bold tracking-tight text-[#F7F8F8]">
+        {{ isPt() ? 'O que dizem sobre minha entrega' : 'What peers say about my delivery' }}
+      </h2>
+      <p class="mt-3 max-w-xl text-sm sm:text-base text-[#8A8F98]">
+        {{
+          isPt()
+            ? 'Feedbacks reais de lideranças técnicas e parceiros em projetos de alta escala.'
+            : 'Verified feedback from engineering leaders and partners on enterprise software.'
+        }}
+      </p>
+    </div>
+
+    <!-- 3 Rotated Cards Grid -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-3 items-stretch pt-4">
+      @for (item of portfolio.testimonials(); track item.id; let idx = $index) {
+        <article
+          class="group relative flex flex-col justify-between rounded-xl border border-white/10 bg-[#121417]/90 p-6 sm:p-7 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-500 ease-out hover:z-20 hover:rotate-0 hover:border-[#38BDF8]/40 hover:shadow-[0_20px_40px_rgba(56,189,248,0.2)]"
+          [class.md:-rotate-2]="item.rotationDeg < 0"
+          [class.md:rotate-2]="item.rotationDeg > 0"
+        >
+          <!-- Scotch Tape Visual Effect -->
+          <span
+            class="pointer-events-none absolute -top-3 left-1/2 h-5 w-16 -translate-x-1/2 -rotate-3 border border-[#38BDF8]/30 bg-[#38BDF8]/20 shadow-sm backdrop-blur-sm transition-transform duration-300 group-hover:rotate-0"
+            aria-hidden="true"
+          ></span>
+
+          <!-- Large Watermark Quote Mark -->
+          <span
+            class="pointer-events-none absolute bottom-2 right-4 select-none font-serif text-5xl font-black text-white/5"
+          >
+            ”
+          </span>
+
+          <div>
+            <!-- Author Header -->
+            <div class="mb-4 flex items-center justify-between gap-3 border-b border-white/5 pb-4">
+              <div>
+                <!-- Stars Rating -->
+                <div class="mb-1 text-xs text-amber-400 drop-shadow-[0_1px_2px_rgba(251,191,36,0.3)]">
+                  ★★★★★
+                </div>
+                <h4 class="text-sm font-bold text-white group-hover:text-[#38BDF8] transition-colors">
+                  {{ item.author }}
+                </h4>
+                <p class="text-[11px] font-medium text-[#8A8F98]">
+                  {{ item.role }} · {{ item.company }}
+                </p>
+              </div>
+
+              <!-- LinkedIn Profile Link -->
+              <a
+                [href]="item.linkedinUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#8A8F98] transition-all hover:scale-110 hover:border-[#38BDF8] hover:text-[#38BDF8]"
+                title="Ver no LinkedIn"
+              >
+                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Quote Text -->
+            <p class="text-xs sm:text-[13px] leading-relaxed text-[#D5DAE4]/90 italic">
+              "{{ portfolio.localize(item.quote) }}"
+            </p>
+          </div>
+
+          <!-- Recommendation badge -->
+          <div class="mt-6 pt-2 flex items-center gap-1.5 text-[10px] font-mono text-[#10B981]">
+            <span>✓</span>
+            <span>{{ isPt() ? 'Recomendação Verificada' : 'Verified Recommendation' }}</span>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>
