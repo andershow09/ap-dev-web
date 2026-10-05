@@ -21,7 +21,7 @@ export class TerminalStreamService implements OnDestroy {
     { prefix: '$', content: 'agent: ap-dev-orchestrator --mode=autonomous', type: 'command' },
     { prefix: '>', content: 'Loading context: memory window + project DAG...', type: 'info' },
     { prefix: '[MCP]', content: 'tool call: inspect_flutter_telemetry(cluster: "prod")', type: 'tool' },
-    { prefix: '»', content: 'workflow: verify_60fps_rendering :: zero jank detected', type: 'workflow' },
+    { prefix: '»', content: 'workflow: verify_fluid_ui_performance :: 60/120fps verified, zero jank', type: 'workflow' },
     { prefix: '✓', content: 'Architecture verified: Clean Architecture + BLoC synced', type: 'success' },
     { prefix: '$', content: 'agent: dispatch_event("stream_ready", target="client")', type: 'command' },
   ];

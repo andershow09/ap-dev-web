@@ -98,7 +98,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
         pt: 'Aplicações web corporativas com Angular 22 Zoneless e React Micro Frontends. BFFs de alta escalabilidade com NestJS, C# / .NET, Node.js e observabilidade profunda com Datadog, Sentry, Firebase Crashlytics e Microsoft Clarity.',
         en: 'Enterprise web architectures with Angular 22 Zoneless and React Micro Frontends. High-throughput NestJS and .NET BFFs, with full-stack observability via Datadog, Sentry, Crashlytics, and Microsoft Clarity.',
       },
-      tags: ['Angular 22', 'React MFE', 'NestJS', 'C# / .NET', 'Datadog', 'Sentry', 'Crashlytics', 'JFrog CI/CD'],
+      tags: ['Angular', 'React MFE', 'NestJS', 'C# / .NET', 'Datadog', 'Sentry', 'Crashlytics', 'JFrog CI/CD'],
     },
   ],
 
@@ -246,34 +246,34 @@ export const PORTFOLIO_DATA: PortfolioData = {
       caseStudyUrl: 'https://www.linkedin.com/in/anderson-s-pereira/',
     },
     {
-      id: 'inside-sistemas',
-      category: '💼 TECH LEAD & ARCHITECTURE',
+      id: 'erp-seguranca-eletronica',
+      category: '🏢 ENTERPRISE ARCHITECTURE · MISSION-CRITICAL SYSTEMS',
       categoryType: 'web',
-      title: 'Inside Sistemas — Tech Leadership & Sistemas Críticos',
+      title: 'ERP para Segurança Eletrônica — Arquitetura Resiliente & Mobilidade Offline-First',
       badge: {
-        pt: 'Tech Lead · 5 Anos',
-        en: 'Tech Lead · 5 Years',
+        pt: 'Arquitetura Resiliente · 5 Anos',
+        en: 'Resilient Architecture · 5 Years',
       },
       accentColor: '#10B981',
       summary: {
-        pt: 'Atuação como Tech Lead na condução de decisões de arquitetura, orientação técnica de equipe e engenharia de sistemas corporativos de gestão com módulos críticos de logística, geolocalização e mobilidade.',
-        en: 'Tech Lead driving architectural decisions, technical team mentorship, and enterprise management software engineering with critical logistics, geolocation, and mobile solutions.',
+        pt: 'Decisões arquiteturais estratégicas para a modernização de ecossistema ERP de alta criticidade voltado à segurança eletrônica e monitoramento, integrando retaguarda distribuída, APIs resilientes e aplicações móveis de campo com sincronização offline-first.',
+        en: 'Strategic architectural decisions modernizing a mission-critical ERP ecosystem in the electronic security and tracking sector, integrating distributed backends, resilient APIs, and offline-first mobile field applications.',
       },
       highlights: [
         {
-          pt: 'Desafio: Conduzir a evolução técnica de sistemas corporativos legados e garantir estabilidade em fluxos logísticos e financeiros de alta exigência.',
-          en: 'Challenge: Lead technical evolution of legacy enterprise systems while guaranteeing high reliability across logistics and financial operations.',
+          pt: 'Desafio Arquitetural: Sustentar operações ininterruptas 24/7 de segurança eletrônica com tolerância a falhas, desacoplando gargalos legados e garantindo integridade transacional de dados em campo sob conectividade intermitente.',
+          en: 'Architectural Challenge: Maintain 24/7 fault-tolerant electronic security operations, decoupling legacy bottlenecks and ensuring transactional data integrity under intermittent field connectivity.',
         },
         {
-          pt: 'Solução Técnica: Liderança técnica com microsserviços, consumo e exposição de APIs, soluções móveis com sincronização offline e geolocalização.',
-          en: 'Technical Solution: Tech leadership with API design, offline-first mobile sync, route optimization, and cross-platform mobile apps.',
+          pt: 'Decisões Técnicas: Adoção de Clean Architecture com desacoplamento por contratos de API, estratégia offline-first com SQLite e sincronização bidirecional idempotente nos apps móveis, e modelagem de persistência de alto throughput no SQL Server.',
+          en: 'Technical Decisions: Clean Architecture with API contract decoupling, offline-first strategy with SQLite and idempotent bidirectional mobile synchronization, and high-throughput persistence modeling on SQL Server.',
         },
         {
-          pt: 'Impacto: 5 anos de governança e evolução contínua, com observabilidade profissional utilizando Datadog, Sentry, Firebase Crashlytics e Microsoft Clarity.',
-          en: 'Impact: 5 years of continuous technical governance and high uptime verified by Datadog, Sentry, Firebase Crashlytics, and Clarity.',
+          pt: 'Impacto & Confiabilidade: Redução expressiva no tempo de resposta das equipes em campo, alta disponibilidade operacional e observabilidade contínua com Sentry, Firebase Crashlytics e Microsoft Clarity.',
+          en: 'Impact & Reliability: Drastic field response time reduction, high operational availability, and continuous observability via Sentry, Firebase Crashlytics, and Microsoft Clarity.',
         },
       ],
-      tags: ['Tech Lead', 'Angular', 'C# / .NET', 'Node.js', 'Flutter / Ionic', 'Sentry', 'Crashlytics', 'SQL Server'],
+      tags: ['Enterprise Architecture', 'Clean Architecture', 'Offline-First', 'Angular', 'C# / .NET', 'Node.js', 'Flutter / Ionic', 'SQL Server', 'Sentry'],
       caseStudyUrl: 'https://www.linkedin.com/in/anderson-s-pereira/',
     },
     {
@@ -328,10 +328,10 @@ export const PORTFOLIO_DATA: PortfolioData = {
     {
       period: '2019 — 2024',
       role: {
-        pt: 'Tech Leadership & Sistemas Corporativos Críticos',
-        en: 'Tech Leadership & Critical Enterprise Systems',
+        pt: 'Tech Leadership & Engenharia de Sistemas Críticos',
+        en: 'Tech Leadership & Mission-Critical Systems Engineering',
       },
-      company: 'Inside Sistemas',
+      company: 'Empresa Especializada em ERP para Segurança Eletrônica',
       description: {
         pt: 'Atuação como Tech Lead liderando decisões técnicas e mentoria de equipe. Arquitetura de APIs corporativas, módulos logísticos com geolocalização e roteirização, aplicações móveis offline-first e observabilidade ativa (Sentry, Crashlytics, Clarity).',
         en: 'Tech Lead heading architectural decisions and team mentorship. Enterprise API architecture, logistics routing, geolocation, offline-first mobile apps, and active observability (Sentry, Crashlytics, Clarity).',
@@ -370,12 +370,12 @@ export const PORTFOLIO_DATA: PortfolioData = {
       id: 'performance',
       icon: 'zap',
       title: {
-        pt: '60fps UI & Core Web Vitals',
-        en: '60fps UI & Core Web Vitals',
+        pt: 'Alta Performance & Fluid UI (60/120 FPS)',
+        en: 'High Performance & Fluid UI (60/120 FPS)',
       },
       description: {
-        pt: 'Renderização sem engasgos em mobile e web, arquitetura Zoneless e carregamento deferido com @defer.',
-        en: 'Jank-free rendering across screens, Zoneless change detection, and deferrable views.',
+        pt: 'Renderização fluida de 60/120 FPS sem jank em mobile e web. Reatividade granular de baixo overhead (Signals e Zoneless), uso eficiente de memória e bateria, e carregamento sob demanda com @defer e Core Web Vitals estritos.',
+        en: 'Jank-free 60/120 FPS rendering across mobile and web. Low-overhead fine-grained reactivity (Signals & Zoneless), efficient memory/battery footprint, and deferred loading with strict Core Web Vitals.',
       },
     },
     {
