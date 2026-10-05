@@ -108,7 +108,7 @@ async function buildOption2() {
       <!-- CARD 1: MOBILE ECOSYSTEM & SDKs                          -->
       <!-- ======================================================== -->
       <g transform="translate(0, 0)">
-        <rect x="0" y="0" width="338" height="120" rx="14" fill="url(#opt2-card-mobile)" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1.2" />
+        <rect x="0" y="0" width="352" height="120" rx="14" fill="url(#opt2-card-mobile)" stroke="#38BDF8" stroke-opacity="0.4" stroke-width="1.2" />
         
         <!-- Header Pill -->
         <g transform="translate(14, 14)">
@@ -117,52 +117,48 @@ async function buildOption2() {
         </g>
         <text x="112" y="29" class="font-mono" font-size="10.5" font-weight="500" fill="#94A3B8">Frameworks &amp; SDKs</text>
 
-        <!-- Chips Row With Brand Logos -->
-        <g transform="translate(12, 46)">
+        <!-- Chips Row With Brand Logos (Clean Spacing, No Overflow) -->
+        <g transform="translate(14, 46)">
           
-          <!-- CHIP 1: FLUTTER (with official logo) -->
+          <!-- CHIP 1: FLUTTER -->
           <g transform="translate(0, 0)">
-            <rect x="0" y="0" width="76" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
-            <!-- Flutter Logo SVG -->
-            <g transform="translate(7, 6) scale(0.66)">
+            <rect x="0" y="0" width="72" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
+            <g transform="translate(6, 6) scale(0.66)">
               <path d="M14.314 0L2.3 12 6 15.7 21.684.013h-7.37z" fill="#54C5F8"/>
               <path d="M14.328 11.072L7.857 17.53l6.47 6.47H21.7l-6.46-6.468 6.46-6.46h-7.372z" fill="#29B6F6"/>
               <path d="M14.328 17.533L9.664 22.197l1.79 1.79 4.664-4.664-1.79-1.79z" fill="#01579B"/>
               <path d="M11.454 23.987l2.874 2.874h7.372l-6.46-6.46-3.786 3.586z" fill="#02569B"/>
             </g>
-            <text x="49" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Flutter</text>
+            <text x="47" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Flutter</text>
           </g>
 
-          <!-- CHIP 2: IONIC (with official logo) -->
-          <g transform="translate(82, 0)">
-            <rect x="0" y="0" width="66" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
-            <!-- Ionic Logo SVG -->
-            <g transform="translate(7, 6) scale(0.66)">
+          <!-- CHIP 2: IONIC -->
+          <g transform="translate(78, 0)">
+            <rect x="0" y="0" width="62" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
+            <g transform="translate(6, 6) scale(0.66)">
               <circle cx="12" cy="12" r="10" fill="#3880FF"/>
               <circle cx="12" cy="12" r="5" fill="#131924"/>
               <circle cx="12" cy="12" r="3" fill="#3880FF"/>
               <circle cx="16.5" cy="7.5" r="2.2" fill="#FFFFFF"/>
             </g>
-            <text x="43" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Ionic</text>
+            <text x="41" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Ionic</text>
           </g>
 
-          <!-- CHIP 3: REACT NATIVE (with official logo) -->
-          <g transform="translate(154, 0)">
-            <rect x="0" y="0" width="86" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
-            <!-- React Atom Logo SVG -->
-            <g transform="translate(7, 6) scale(0.66)">
+          <!-- CHIP 3: REACT NATIVE -->
+          <g transform="translate(146, 0)">
+            <rect x="0" y="0" width="84" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
+            <g transform="translate(6, 6) scale(0.66)">
               <circle cx="12" cy="12" r="2.2" fill="#61DAFB"/>
               <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(0 12 12)"/>
               <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(60 12 12)"/>
               <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(120 12 12)"/>
             </g>
-            <text x="54" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">React N.</text>
+            <text x="53" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">React N.</text>
           </g>
 
-          <!-- CHIP 4: ANDROID SDK (with official bugdroid logo) -->
-          <g transform="translate(246, 0)">
-            <rect x="0" y="0" width="80" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
-            <!-- Android Head SVG -->
+          <!-- CHIP 4: ANDROID SDK (Zero overflow, ample margin) -->
+          <g transform="translate(236, 0)">
+            <rect x="0" y="0" width="76" height="28" rx="7" fill="#131924" stroke="#253248" stroke-width="1" />
             <g transform="translate(6, 6) scale(0.66)">
               <path d="M5 14C5 9.03 9.03 5 14 5s9 4.03 9 9H5z" fill="#3DDC84"/>
               <circle cx="9.5" cy="10" r="1.3" fill="#131924"/>
@@ -170,22 +166,22 @@ async function buildOption2() {
               <line x1="7.5" y1="5.5" x2="5" y2="2" stroke="#3DDC84" stroke-width="1.6" stroke-linecap="round"/>
               <line x1="20.5" y1="5.5" x2="23" y2="2" stroke="#3DDC84" stroke-width="1.6" stroke-linecap="round"/>
             </g>
-            <text x="51" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Android</text>
+            <text x="49" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Android</text>
           </g>
 
         </g>
 
-        <!-- Micro description & SDK notes -->
-        <text x="14" y="103" class="font-mono" font-size="10" font-weight="500" fill="#94A3B8">
-          Dart · Kotlin · MVVM · BLoC · Offline First
+        <!-- Micro description & SDK notes (Updated) -->
+        <text x="14" y="103" class="font-mono" font-size="9.8" font-weight="500" fill="#94A3B8">
+          Dart · Clean Arch · MVVM · RxJS · Offline First
         </text>
       </g>
 
       <!-- ======================================================== -->
       <!-- CARD 2: FULL STACK ECOSYSTEM & SDKs                      -->
       <!-- ======================================================== -->
-      <g transform="translate(352, 0)">
-        <rect x="0" y="0" width="338" height="120" rx="14" fill="url(#opt2-card-fullstack)" stroke="#5E6AD2" stroke-opacity="0.5" stroke-width="1.2" />
+      <g transform="translate(366, 0)">
+        <rect x="0" y="0" width="352" height="120" rx="14" fill="url(#opt2-card-fullstack)" stroke="#5E6AD2" stroke-opacity="0.5" stroke-width="1.2" />
         
         <!-- Header Pill -->
         <g transform="translate(14, 14)">
@@ -195,60 +191,56 @@ async function buildOption2() {
         <text x="130" y="29" class="font-mono" font-size="10.5" font-weight="500" fill="#94A3B8">Web, APIs &amp; Cloud</text>
 
         <!-- Chips Row With Brand Logos -->
-        <g transform="translate(12, 46)">
+        <g transform="translate(14, 46)">
           
-          <!-- CHIP 1: ANGULAR (with official gradient logo) -->
+          <!-- CHIP 1: ANGULAR -->
           <g transform="translate(0, 0)">
-            <rect x="0" y="0" width="76" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
-            <!-- Angular Logo SVG -->
+            <rect x="0" y="0" width="74" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
             <g transform="translate(6, 6) scale(0.66)">
               <path d="M12 2L3 5.2l1.4 12.3L12 22l7.6-4.5 1.4-12.3L12 2z" fill="url(#angular-grad)"/>
               <path d="M12 2v20l7.6-4.5 1.4-12.3L12 2z" fill="#9F1239" opacity="0.4"/>
               <path d="M12 5.5l-4.8 10.8h2l1-2.5h3.6l1 2.5h2L12 5.5zm1.2 6.5h-2.4L12 8.7l1.2 3.3z" fill="#FFFFFF"/>
             </g>
-            <text x="50" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Angular</text>
+            <text x="48" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Angular</text>
           </g>
 
-          <!-- CHIP 2: REACT (with official logo) -->
-          <g transform="translate(82, 0)">
-            <rect x="0" y="0" width="66" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
-            <!-- React Atom Logo SVG -->
+          <!-- CHIP 2: REACT -->
+          <g transform="translate(80, 0)">
+            <rect x="0" y="0" width="64" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
             <g transform="translate(6, 6) scale(0.66)">
               <circle cx="12" cy="12" r="2.2" fill="#61DAFB"/>
               <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(0 12 12)"/>
               <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(60 12 12)"/>
               <ellipse cx="12" cy="12" rx="9" ry="3.5" fill="none" stroke="#61DAFB" stroke-width="1.3" transform="rotate(120 12 12)"/>
             </g>
-            <text x="44" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">React</text>
+            <text x="43" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">React</text>
           </g>
 
-          <!-- CHIP 3: NESTJS (with official logo) -->
-          <g transform="translate(154, 0)">
-            <rect x="0" y="0" width="74" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
-            <!-- NestJS Logo SVG -->
+          <!-- CHIP 3: NESTJS -->
+          <g transform="translate(150, 0)">
+            <rect x="0" y="0" width="70" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
             <g transform="translate(6, 6) scale(0.66)">
               <path d="M12.5 2.2C10.8 1.9 8.2 3 7 4.2L4.5 7.5c-1 1.4-1.2 3-.5 4.5l1.8 3.5c.8 1.6 2.4 2.6 4.2 2.6h3c1.5 0 3-.8 3.8-2l2.2-3.5c.8-1.2.6-2.8-.4-3.8L16 6.5c-1-1-2.2-1.8-3.5-2.2v-2.1z" fill="#E0234E"/>
               <path d="M14 6l3.5 3.5-2 3.5h-3l2-3.5L14 6z" fill="#FFFFFF" opacity="0.95"/>
             </g>
-            <text x="48" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">NestJS</text>
+            <text x="46" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">NestJS</text>
           </g>
 
-          <!-- CHIP 4: NODE.JS (with official logo) -->
-          <g transform="translate(234, 0)">
-            <rect x="0" y="0" width="80" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
-            <!-- Node.js Logo SVG -->
+          <!-- CHIP 4: NODE.JS -->
+          <g transform="translate(226, 0)">
+            <rect x="0" y="0" width="76" height="28" rx="7" fill="#181528" stroke="#312B4C" stroke-width="1" />
             <g transform="translate(6, 6) scale(0.66)">
               <path d="M12 2l8.5 4.9v9.8L12 21.6 3.5 16.7V6.9L12 2z" fill="#5FA04E"/>
               <path d="M12 2l8.5 4.9-8.5 4.9-8.5-4.9L12 2z" fill="#68A063"/>
               <path d="M12 11.8v9.8l8.5-4.9V6.9L12 11.8z" fill="#43853D"/>
             </g>
-            <text x="51" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Node.js</text>
+            <text x="49" y="18" class="font-mono" font-size="10.5" font-weight="600" fill="#F8FAFC" text-anchor="middle">Node.js</text>
           </g>
 
         </g>
 
         <!-- Micro description & SDK notes -->
-        <text x="14" y="103" class="font-mono" font-size="10" font-weight="500" fill="#94A3B8">
+        <text x="14" y="103" class="font-mono" font-size="9.8" font-weight="500" fill="#94A3B8">
           TypeScript · Signals Zoneless · Micro Frontends
         </text>
       </g>
