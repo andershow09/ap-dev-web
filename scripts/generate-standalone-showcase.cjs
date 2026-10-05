@@ -381,16 +381,16 @@ function generateStandaloneShowcase() {
 
       <div class="features-grid">
         <div class="feature-box">
+          <h4>🏷️ Logos Vetoriais Oficiais</h4>
+          <p>Ícones com cores oficiais para Flutter, Ionic, React Native, Android, Angular, React, NestJS e Node.js embutidos em cada chip.</p>
+        </div>
+        <div class="feature-box">
           <h4>🔮 Iluminação Volumétrica 3D</h4>
           <p>Smartphone futurista com neon edge glow (#38BDF8) e computação em nuvem ao fundo.</p>
         </div>
         <div class="feature-box">
-          <h4>🛡️ Vinheta de Alto Contraste</h4>
-          <p>Gradiente escuro à esquerda para leitura 100% nítida e proteção do avatar.</p>
-        </div>
-        <div class="feature-box">
           <h4>💎 Glassmorphism</h4>
-          <p>Cards de Mobile e Full Stack translúcidos perfeitamente legíveis sobre o render.</p>
+          <p>Cards de Mobile e Full Stack translúcidos perfeitamente legíveis sobre o render e protegidos contra corte de avatar.</p>
         </div>
       </div>
     </div>
