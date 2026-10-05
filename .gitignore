@@ -49,3 +49,7 @@ Thumbs.db
 !.dev.vars.example
 .env*
 !.env.example
+
+# Unversioned local assets & generated banners
+.unversioned/
+.local-assets/
