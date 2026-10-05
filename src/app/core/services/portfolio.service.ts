@@ -49,7 +49,7 @@ export class PortfolioService {
   }
 
   toggleLanguage(): void {
-    this.currentLanguage.update(curr => (curr === 'pt' ? 'en' : 'pt'));
+    this.currentLanguage.update((curr) => (curr === 'pt' ? 'en' : 'pt'));
   }
 
   // Helper to extract localized text based on current language
@@ -70,19 +70,19 @@ export class PortfolioService {
   private fetchGitHubData(): void {
     this.http
       .get<{ public_repos?: number; followers?: number }>(
-        'https://api.github.com/users/andershow09'
+        'https://api.github.com/users/andershow09',
       )
       .pipe(
         catchError(() =>
           of({
             public_repos: 32,
             followers: 24,
-          })
-        )
+          }),
+        ),
       )
-      .subscribe(res => {
+      .subscribe((res) => {
         if (res && res.public_repos !== undefined) {
-          this.githubStats.update(prev => ({
+          this.githubStats.update((prev) => ({
             ...prev,
             publicRepos: res.public_repos ?? prev.publicRepos,
             followers: res.followers ?? prev.followers,

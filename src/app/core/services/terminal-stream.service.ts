@@ -20,10 +20,26 @@ export class TerminalStreamService implements OnDestroy {
   private readonly sequence: TerminalLine[] = [
     { prefix: '$', content: 'agent: ap-dev-orchestrator --mode=autonomous', type: 'command' },
     { prefix: '>', content: 'Loading context: memory window + project DAG...', type: 'info' },
-    { prefix: '[MCP]', content: 'tool call: inspect_flutter_telemetry(cluster: "prod")', type: 'tool' },
-    { prefix: '»', content: 'workflow: verify_fluid_ui_performance :: 60/120fps verified, zero jank', type: 'workflow' },
-    { prefix: '✓', content: 'Architecture verified: Clean Architecture + BLoC synced', type: 'success' },
-    { prefix: '$', content: 'agent: dispatch_event("stream_ready", target="client")', type: 'command' },
+    {
+      prefix: '[MCP]',
+      content: 'tool call: inspect_flutter_telemetry(cluster: "prod")',
+      type: 'tool',
+    },
+    {
+      prefix: '»',
+      content: 'workflow: verify_fluid_ui_performance :: 60/120fps verified, zero jank',
+      type: 'workflow',
+    },
+    {
+      prefix: '✓',
+      content: 'Architecture verified: Clean Architecture + BLoC synced',
+      type: 'success',
+    },
+    {
+      prefix: '$',
+      content: 'agent: dispatch_event("stream_ready", target="client")',
+      type: 'command',
+    },
   ];
 
   constructor() {
@@ -37,8 +53,8 @@ export class TerminalStreamService implements OnDestroy {
     this.intervalId = setInterval(() => {
       if (this.step < this.sequence.length) {
         const next = this.sequence[this.step];
-        this.lines.update(current => [...current, next]);
-        this.currentTokens.update(t => t + Math.floor(Math.random() * 80 + 30));
+        this.lines.update((current) => [...current, next]);
+        this.currentTokens.update((t) => t + Math.floor(Math.random() * 80 + 30));
         this.step++;
       } else {
         // Pause and reset cycle

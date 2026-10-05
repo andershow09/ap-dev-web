@@ -9,10 +9,7 @@ describe('TerminalStreamService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
-        provideZonelessChangeDetection(),
-        TerminalStreamService,
-      ],
+      providers: [provideZonelessChangeDetection(), TerminalStreamService],
     });
 
     service = TestBed.inject(TerminalStreamService);
